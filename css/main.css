@@ -711,6 +711,37 @@ body._lock {
   outline: none;
 }
 
+.thanks {
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  height: 99vh;
+  background-color: #eeeeee;
+  color: #000;
+  z-index: 50;
+  text-align: center;
+}
+
+.thanks-title {
+  font-size: 50px;
+  line-height: normal;
+  direction: rtl;
+  margin: 0 0 50px 0;
+}
+
+.thanks-button {
+  font-size: 18px;
+  line-height: normal;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+}
+
+.thanks-button:hover {
+  text-decoration: underline;
+}
+
 @font-face {
   font-family: Futura PT;
   src: url(../fonts/FuturaPT-Book.woff) format("woff");
