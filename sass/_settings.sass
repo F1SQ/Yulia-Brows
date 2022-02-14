@@ -1,0 +1,243 @@
+body
+  font-family: Futura PT, Arial, sans-serif
+body._lock
+  overflow: hidden
+
+.container
+  width: 1170px
+  margin: 0 auto
+  max-width: 100%
+
+.img
+  max-width: 100%
+  height: auto
+  display: block
+
+.page
+  &-number
+    position: relative
+.number
+  position: relative
+  font-size: 30px
+  font-weight: 600
+  line-height: normal
+  &::after
+    content: '/'
+    position: absolute
+    left: 2px
+    top: 4px
+    bottom: 0
+    transform: rotate(15deg)
+    font-size: 21px
+  &--big
+    // position: absolute
+    color: #afb1b6
+    font-size: 250px
+    line-height: 1
+    font-weight: 700
+    opacity: 0.3
+
+.aside
+  &-menu
+    position: fixed
+    right: 0
+    top: 0
+    bottom: 0
+    width: 70px
+    background-color: #e3e5e8
+    z-index: 90
+    padding: 0 0 80px 0
+  &-wrapper
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: center
+    min-height: 100%
+  &-block
+
+    &__top
+      width: 100%
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+    &__bottom
+      width: 100%
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+
+  &-link, &-button
+    width: 70px
+    height: 75px
+    display: flex
+    justify-content: center
+    align-items: center
+    transition: all 0.2s linear
+    cursor: pointer
+    img
+      width: 24px
+      height: auto
+    &--phone
+      background-color: #b3b6bb
+    &:hover
+      background-color: #fff
+
+.hidden
+  &-menu
+    width: 100%
+    height: 100%
+    position: fixed
+    left: 0
+    right: 0
+    top: -100%
+    bottom: 0
+    overflow: hidden
+    overflow-y: auto !important
+    background-color: #fff
+    z-index: 99
+    transition: all 0.4s linear
+    opacity: 0
+    &__wrapper
+      position: relative
+    &__header
+      display: flex
+      justify-content: space-between
+      align-items: center
+      // margin: 0 0 120px 0
+      margin: 0 0 100px 0
+      padding: 20px 0 0 110px
+    &__logo
+      width: 100px
+      height: auto
+      a
+        display: block
+        width: 120px
+        height: 100px
+      img
+        width: 100%
+        height: auto
+
+    &__close
+      position: absolute
+      top: 20px
+      right: 20px
+      cursor: pointer
+      img
+        width: 25px
+    &__content
+      position: relative
+      &::after
+        content: 'Menu'
+        position: absolute
+        left: -35px
+        top: -50px
+        color: #e3e5e8
+        font-size: 300px
+        line-height: 1
+        font-weight: 700
+        letter-spacing: 3px
+        opacity: 0.3
+        text-transform: uppercase
+        z-index: -10
+    &__list
+      display: grid
+      grid-template-columns: repeat(3, 1fr)
+      gap: 50px
+      // display: flex
+      // flex-wrap: wrap
+      width: 100%
+      list-style: none
+      padding: 0
+      margin: 0 0 70px 0
+      // margin: 0 0 150px 0
+      li
+        // flex-basis: 30%
+        // margin: 0 0 85px 0
+    &__item
+      position: relative
+      color: #3a3a3a
+      font-size: 30px
+      line-height: 1.55
+      font-weight: 600
+      text-decoration: none
+      transition: all 0.3s linear
+      cursor: pointer
+      &:before
+        content: ''
+        position: absolute
+        width: 0%
+        height: 2px
+        bottom: 40%
+        left: -10%
+        margin-top: -0.5px
+        background: #000
+        transform: translateY(50%)
+      &:hover:before
+        background: #000
+        width: 120%
+        transition: width 0.4s cubic-bezier(0.22, 0.61, 0.36, 1)
+    &__contacts
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      &-button
+        position: relative
+        font-size: 18px
+        font-weight: 600
+        color: #3a3a3a
+        line-height: 1.55
+        text-decoration: none
+        cursor: pointer
+        &:before
+          content: ''
+          position: absolute
+          width: 0%
+          height: 2px
+          bottom: 43%
+          left: -10%
+          margin-top: -0.5px
+          background: #000
+          transform: translateY(50%)
+        &:hover:before
+          background: #000
+          width: 120%
+          transition: width 0.4s cubic-bezier(0.22, 0.61, 0.36, 1)
+    &__badge
+      color: #000000
+      font-size: 24px
+      line-height: 1
+      font-weight: 500
+      margin: 0 0 60px 0
+    &__phone
+      color: #000000
+      font-size: 24px
+      line-height: 1
+      font-weight: 500
+      margin: 0 0 10px 0
+      text-decoration: none
+      transition: all 0.3s ease
+      &:hover
+        text-decoration: underline
+    &__adress
+      color: #3a3a3a
+      font-size: 18px
+      line-height: 1.55
+      font-weight: 400
+      margin: 0 0 50px 0
+    &__social
+      display: none
+
+    &--visible
+      top: 0
+      opacity: 1
+
+.input
+  font-style: normal
+  font-weight: normal
+  font-size: 15px
+  line-height: 125%
+  border-radius: 4px
+  border: none
+  outline: none

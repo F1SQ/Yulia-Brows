@@ -1,0 +1,907 @@
+// Main section
+.header
+  position: relative
+  &-logo
+    width: 100px
+    height: auto
+    z-index: 45
+    a
+      display: block
+      min-height: 100%
+      height: 100%
+    img
+      width: 100%
+  &-menu
+    display: flex
+    justify-content: space-between
+    align-items: center
+    position: fixed
+    width: 100%
+    height: 75px
+    min-height: 75px
+    top: 0
+    left: 0
+    padding: 0 calc(250px + (422 - 370) * ((100vw - 320px) / (1920 - 1024))) 0 45px
+    z-index: 50
+    &::after
+      content: ''
+      position: absolute
+      width: 100%
+      height: 100%
+      left: 0
+      top: -100%
+      right: 0
+      background-color: #fafafa
+      transition: all 0.1s linear
+      z-index: 0
+    &__phone
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 220px
+      font-size: 22px
+      letter-spacing: 1.3px
+      font-weight: 600
+      color: #000
+      text-decoration: none
+      transition: all 0.2s linear
+      margin: 0 25px 0 0
+      z-index: 50
+      &:hover
+        text-decoration: underline
+      &--mobile
+        display: none
+        width: 300px
+        height: 100%
+        background-color: #000
+        color: #fff
+        font-size: 17px
+        letter-spacing: 1.5px
+        font-weight: bold
+        text-transform: uppercase
+        text-decoration: none
+        cursor: pointer
+        border: none
+
+    &__burger
+      display: none
+    &__request
+      position: relative
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 300px
+      height: 100%
+      background-color: #000
+      color: #fff
+      font-size: 15px
+      letter-spacing: 1.5px
+      font-weight: bold
+      text-transform: uppercase
+      text-decoration: none
+      cursor: pointer
+      border: none
+      transition: all 0.2s linear
+      z-index: 50
+      &:hover
+        background-color: #fff
+        color: #000
+      &:before
+        content: ''
+        position: absolute
+        width: 0%
+        height: 2px
+        bottom: 50%
+        left: 20%
+        margin-top: -0.5px
+        background: #000
+      &:hover:before
+        background: #000
+        width: 60%
+        transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1)
+      &--mobile
+        display: none
+        color: #000
+        font-size: 25px
+        text-shadow: 0px 0px 2px black
+        text-decoration: none
+    &__buttons
+      display: flex
+      justify-content: center
+      align-items: center
+      height: 100%
+      z-index: 50
+    &_scroll
+      &::after
+        top: 0
+.main
+  display: flex
+  // justify-content: center
+  // align-items: center
+  width: 100%
+  min-height: 100vh
+  overflow: hidden
+
+  &-content
+    min-height: 100%
+    position: relative
+    flex-basis: 45%
+    flex-shrink: 0
+    // background-image: url('../img/main-bg.jpg')
+    // background-repeat: no-repeat
+    // background-size: cover
+    // background-position: right center
+    &::before
+      content: ''
+      width: 100%
+      height: 100%
+      left: 0
+      top: 0
+      bottom: 0
+      right: 0
+      position: absolute
+      background-image: url('../img/Окрашивание бровей Петах Тиква - Мастер Перманентного Макияжа - Yulia Brows Ламинирование бровей.jpg')
+      background-position: right center
+      background-repeat: no-repeat
+      background-size: cover
+      object-fit: cover
+      overflow: hidden
+      z-index: -5
+    &__description
+      position: absolute
+      bottom: 60px
+      left: 60px
+    &__page
+      &-number
+        display: inline-block
+        margin: 0 0 65px 0
+    &__title
+      font-size: 34px
+      margin: 0 0 25px 0
+    &__text
+      font-size: 16px
+      color: #000
+      opacity: 0.6
+      line-height: 1.5
+  &-info
+    // position: relative
+    display: flex
+    justify-content: center
+    align-items: flex-start
+    flex-direction: column
+    min-height: 100%
+    padding: 0 0 0 120px
+    &__wrapper
+      flex-basis: 55%
+      padding: 200px 70px 150px 0
+  &-title
+    position: relative
+    font-size: calc(32px + (68 - 32) * ((100vw - 320px) / (1920 - 320)))
+    margin: 0
+    line-height: 1.2
+    &__block
+      position: relative
+      // position: absolute
+      // top: 45%
+      // left: 120px
+      // transform: translateY(-50%)
+      // flex-basis: 50%
+      display: flex
+      justify-content: center
+      align-items: center
+    &__span
+      font-weight: 500
+    &__description
+      position: absolute
+      left: -230px
+      // top: 0
+      // bottom: 0
+      // font-size: 220px
+      font-size: calc(150px + (220 - 150) * ((100vw - 320px) / (1920 - 320)))
+      font-weight: 700
+      opacity: 0.06!important
+      text-transform: uppercase
+  &-subtitle
+    font-size: 30px
+    font-weight: 700
+    text-transform: uppercase
+    writing-mode: vertical-lr!important
+    transform: rotate(180deg)!important
+    margin: 15px 130px 0 0
+  &-description
+    display: inline-block
+    display: flex
+    justify-content: center
+    // align-items: center
+    &__block
+      display: flex
+      justify-content: center
+      align-items: center
+      margin: 173px 0 0 0
+      // flex-basis: 50%
+
+    &__text
+      position: relative
+      max-width: 245px
+      margin: 0 0 0 140px
+      font-size: 16px
+      color: rgba(0, 0, 0, 0.45)
+      line-height: 1.5
+      &::before
+        content: '/'
+        position: absolute
+        top: -50px
+        left: 0
+        font-size: 18px
+        font-weight: 700
+        color: #000000
+        transform: translateY(-50%) rotate(15deg)
+
+// Services section  
+.services
+  position: relative
+  padding: 100px 0 100px 400px
+  background-color: #f7f7f7
+  &-menu
+    position: relative
+    display: flex
+    align-items: center
+    list-style: none
+    padding: 0
+    margin: 0 0 125px 0
+    &::after
+      content: ''
+      position: absolute
+      bottom: 0
+      right: 0
+      left: 0
+      height: 2px
+      background-color: #000
+    li
+      display: flex
+      justify-content: center
+      align-items: center
+      padding: 10px 60px
+      width: 395px
+      min-height: 75px
+      font-size: 14px
+      line-height: normal
+      font-weight: 700
+      color: #ccc
+      text-transform: uppercase
+      text-align: center
+      overflow: hidden
+      cursor: pointer
+      transition: all 0.2s linear
+      &:hover
+        color: #000
+    li.active
+      background-color: #000
+      color: #fff
+  &-wrapper
+    // position: relative
+  &-tabWrapper
+    display: none
+  &-content
+    display: block
+  &-title
+    position: absolute
+    left: 50px
+    top: 310px
+    font-size: 45px
+    font-weight: 300
+    letter-spacing: 0.8px
+    line-height: normal
+    writing-mode: vertical-lr
+    transform: rotate(180deg)!important
+    margin: 0
+    z-index: 20
+  &-title--bold
+    font-weight: 600
+    margin: 15px 0 0 0
+
+  &-slide
+    display: flex
+    align-items: flex-start
+    height: 600px
+    &__image
+      flex-shrink: 0
+      // min-width: 320px
+      max-width: 450px
+      height: 600px
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
+    &__info
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      align-items: flex-end
+      width: 230px
+      height: 100%
+      padding: 15px 50px 40px 0
+      overflow: hidden
+
+    &__signature
+      font-size: 30px
+      text-transform: uppercase
+      font-weight: 700
+      writing-mode: vertical-lr
+      line-height: normal
+      letter-spacing: 1px
+      transform: rotate(180deg)
+    &__description
+      max-width: 500px
+      padding: 20px 10px 0 60px
+    &__title
+      font-size: 60px
+      font-weight: 300
+      margin: 0 0 30px 0
+      line-height: 1
+      &--bold
+        font-weight: 600
+    &__number
+      max-width: 75px
+      display: flex
+      justify-content: space-between
+      align-items: flex-start
+      line-height: 0.5
+      margin: 0 0 30px 0
+      &--main
+        position: relative
+        font-size: 24px
+        font-weight: 400
+        color: #000a12
+        &::after
+          content: '/'
+          position: absolute
+          top: 0
+          right: -23px
+          bottom: 0
+          font-size: 24px
+          font-weight: 400
+          color: #000a12
+      &--big
+        position: absolute
+        top: -40px
+        left: -210px
+
+      &--secondary
+        font-size: 15px
+    &__text
+      color: #898989
+      font-size: 16px
+      line-height: 1.55
+      font-weight: 400
+      margin: 0 0 25px 0
+    &__bottom
+      display: flex
+      justify-content: flex-start
+      flex-wrap: wrap
+      align-items: center
+    &__price
+      margin: 0 40px 0 0
+      color: #000a12
+      font-size: 18px
+      line-height: 1
+      font-weight: 400
+      &--bold
+        color: #000a12
+        font-size: 22px
+        line-height: 1
+        font-weight: 700
+        margin: 0 0 0 5px
+    &__time
+      color: #000a12
+      font-size: 18px
+      line-height: 1
+      font-weight: 400
+      &--bold
+        color: #000a12
+        font-size: 22px
+        line-height: 1
+        font-weight: 700
+        margin: 0 0 0 5px
+
+.services
+  &-slider
+    position: relative
+    &__button
+      position: absolute
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 95px
+      height: 55px
+      transition: all 0.2s linear
+      cursor: pointer
+      z-index: 35
+      &--prev
+        font-size: 35px
+        font-weight: 300
+        background-color: #c0c3c8
+        bottom: 20px
+        left: 738px
+        transform: rotate(180deg)
+      &--next
+        font-size: 35px
+        font-weight: 300
+        background-color: #c6cad1
+        bottom: 20px
+        left: 832px
+      &:hover
+        background-color: #fff
+
+// section price  
+.price
+  padding: 80px 70px 0 0
+  background-color: #f7f7f7
+  &-wrapper
+    width: 100%
+    display: flex
+
+  &-title
+    color: #000000
+    font-size: 28px
+    line-height: 1
+    font-weight: 700
+    text-transform: uppercase
+    margin: 35px 0 0 0
+    &__wrapper
+      min-height: 190px
+      display: flex
+      justify-content: center
+      align-items: center
+      text-align: center
+      &-brows
+        // position: relative
+        overflow: hidden
+    // &__brows
+    //   &::after
+    //     content: '/'
+    //     position: absolute
+    //     left: 291px
+    //     bottom: 61px
+    //     font-size: 15px
+    //     font-weight: 600
+    //     transform: translateX(-50%) translateY(-50%) rotate(15deg)
+
+  &-eyelashes
+    position: relative
+    flex: 0 1 36%
+    max-width: 36%
+    background-color: #fff
+    &__number
+      &--big
+        position: absolute
+        top: -10px
+
+  &-brows
+    flex: 0 1 32%
+    max-width: 32%
+    background-color: #e3e5e8
+
+  &-lips
+    flex: 0 1 32%
+    max-width: 32%
+    background-color: #f2f4f6
+
+  &-list
+    margin: 0
+    padding: 0
+    list-style: none
+    &__eyelashes
+      li:nth-child(2n)
+        background-color: #edf0f3
+    &__brows
+      li:nth-child(odd)
+        background-color: #f6f7f8
+    &__lips
+      li:nth-child(odd)
+        background-color: #fff
+  &-item
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    max-width: 100%
+    // flex-wrap: wrap
+
+    &__eyelashes
+      padding: 20px 30px 20px 50px
+    &__brows
+      padding: 20px 30px
+    &__lips
+      padding: 20px 30px
+    &__description
+      line-break: anywhere
+      color: #3a3a3a
+      font-size: 18px
+      line-height: 1.2
+      font-weight: 400
+
+    &__value
+      flex-shrink: 0
+      color: #3a3a3a
+      font-size: 20px
+      line-height: 1.2
+      font-weight: 500
+      margin: 0 0 0 8px
+
+// section collective
+
+.collective
+  padding: 80px 300px 0 40px
+  background-color: #f5f5f5
+  overflow: hidden
+  &-wrapper
+    width: 100%
+    display: flex
+    align-items: flex-start
+
+  &-title
+    margin: 60px 160px 0 0
+    font-size: 45px
+    font-weight: 300
+    letter-spacing: 0.8px
+    line-height: normal
+    writing-mode: vertical-lr
+    transform: rotate(180deg)
+    br
+      display: none
+  &-title--bold
+    font-weight: 600
+    margin: 15px 0 0 0
+
+  &-content
+    display: flex
+    justify-content: space-between
+  &-photo
+    flex-shrink: 0
+    margin: -50px 0 0 0
+    // max-width: 530px
+    max-width: 600px
+    max-height: 830px
+    z-index: 10
+    img
+      display: block
+      max-width: 100%
+      width: 100%
+      max-height: 100%
+      // min-width: 100%
+      // height: 100%
+  &-position
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-between
+    min-width: 100px
+    margin: 0 57px 0 0
+    padding: 140px 0 150px 0
+    z-index: 0
+    &__profession
+      color: #000000
+      font-size: 50px
+      line-height: 1
+      font-weight: 300
+      writing-mode: vertical-lr
+      transform: rotate(180deg)
+  &__page-number
+    &--big
+      position: absolute
+      left: -202px
+      top: -142px
+  &-name
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    margin: 0 0 120px 0
+  &__name
+    color: #000a12
+    font-size: 60px
+    font-weight: 400
+    line-height: 1
+    &--bold
+      color: #000a12
+      font-size: 60px
+      line-height: 1
+      font-weight: 700
+
+  &-person
+    max-width: 700px
+    margin: 0 0 100px 0
+    padding: 120px 0 0 0
+    z-index: 10
+    &__text
+      color: #3a3a3a
+      font-size: 16px
+      line-height: 1.65
+      font-weight: 400
+
+// section gallery
+
+.gallery
+  padding: 130px 420px 110px 40px
+
+  &-wrapper
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+
+  &-title
+    margin: 60px 300px 0 0
+    font-size: 45px
+    font-weight: 300
+    letter-spacing: 0.8px
+    line-height: normal
+    writing-mode: vertical-lr
+    transform: rotate(180deg)
+    &--bold
+      font-weight: 600
+      margin: 15px 0 0 0
+
+  &-content
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    padding: 0 20px
+    gap: 20px
+  &-item
+    // flex: 1 0 47%
+    max-height: 400px
+    overflow: hidden
+    transition: all 0.3s ease
+    &:hover
+      transform: scale(1.01)
+      box-shadow: 0 0 10px 1px #ccc
+    a
+      display: inline-block
+      position: relative
+      width: 100%
+      // height: 100%
+      height: 100%
+      cursor: pointer
+      text-decoration: none
+
+      &::before
+        content: ''
+        position: absolute
+        width: 100%
+        height: 30%
+        top: 0
+        left: 0
+        right: 0
+        // bottom: 0
+        background-color: #ffffff9f
+        transition: opacity 0.4s ease, top 0.4s ease, height 0.6s ease
+        opacity: 0
+      &::after
+        content: ''
+        position: absolute
+        width: 100%
+        height: 30%
+        bottom: 0
+        left: 0
+        right: 0
+        // bottom: 0
+        background-color: #ffffff9f
+        transition: opacity 0.4s ease, bottom 0.4s ease, height 0.6s ease
+        opacity: 0
+      &:hover
+        span
+          transform: translate(-50%, -50%) scale(1)
+          opacity: 1
+        &::before, &::after
+          opacity: 1
+        &::before
+          top: auto
+          bottom: 0
+          height: 100%
+          // visibility: visible
+          z-index: 0
+        &::after
+          bottom: auto
+          height: 100%
+          top: 0
+      span
+        position: absolute
+        top: 50%
+        left: 50%
+        width: 80%
+        transform: translate(-50%, -50%) scale(0)
+        font-size: 35px
+        line-height: normal
+        font-weight: bold
+        color: #000
+        text-align: center
+        transition: all 0.4s ease
+        opacity: 0
+        z-index: 10
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
+
+// section contacts
+
+.contacts
+  background-color: #f8f8f8
+  padding: 140px 395px 50px 35px
+  overflow: hidden
+  &__page
+    // position: relative
+
+    &-number
+      display: flex
+      align-items: center
+      justify-content: space-between
+      margin: 0 0 15px 0
+      &--big
+        position: absolute
+        left: -10px
+        top: -100px
+
+  &-wrapper
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+  &-title
+    margin: 60px 300px 0 0
+    font-size: 45px
+    font-weight: 300
+    letter-spacing: 0.8px
+    line-height: normal
+    writing-mode: vertical-lr
+    transform: rotate(180deg)!important
+  &-title--bold
+    font-weight: 600
+  &-subtitle
+    color: #000000
+    font-size: 60px
+    line-height: 1.55
+    font-weight: 600
+  &-info
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+  &-map
+    z-index: 20
+    width: 800px
+    height: 530px
+  &-specification
+    flex-grow: 1
+  &-text
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: flex-start
+    background-color: #f2f4f6
+    padding: 25px 25px 25px 40px
+  &-badge
+    color: #3a3a3a
+    font-size: 18px
+    line-height: 1
+    font-weight: 700
+    margin: 0 0 15px 0
+  &-phone
+    color: #3a3a3a
+    font-size: 18px
+    line-height: 1
+    font-weight: 500
+    text-decoration: none
+    transition: all 0.2s linear
+    margin: 0 0 8px 0
+    &:hover
+      text-decoration: underline
+  &-adress
+    color: #3a3a3a
+    font-size: 14px
+    line-height: 1
+    font-weight: 400
+    margin: 0 0 15px 0
+
+  &-button
+    position: relative
+    color: #3a3a3a
+    font-size: 15px
+    line-height: 1.55
+    font-weight: 700
+    text-transform: uppercase
+    text-decoration: none
+    cursor: pointer
+    &:before
+      content: ''
+      position: absolute
+      width: 0%
+      height: 2px
+      left: -10px
+      bottom: 50%
+      margin-top: -0.5px
+      background: #000
+    &:hover:before
+      width: 120%
+      transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1)
+
+  &-schedule
+    padding: 25px 10px 25px 40px
+    background-color: #fff
+    &__text
+      color: #3a3a3a
+      font-size: 14px
+      line-height: 1.55
+      font-weight: 600
+    sup
+      // text-decoration: underline
+      color: #3a3a3a
+.footer
+  background-color: #f8f8f8
+  padding: 30px 0 30px 0
+  &-rights
+    display: flex
+    justify-content: center
+    &__text
+      color: #3a3a3a
+      font-size: 16px
+      line-height: 1.8
+      font-weight: 300
+      &:not(:last-child)
+        margin: 0 50px 0 0
+
+.portfolio
+  padding: 100px 80px 80px 80px
+  &-wrapper
+    display: flex
+    justify-content: flex-start
+    // align-items: center
+    flex-direction: column
+  &-title
+    color: #333
+    font-size: 35px
+    line-height: normal
+    font-weight: 500
+    text-align: center
+    margin: 0 0 35px 0
+    &--bold
+      font-weight: 600
+      margin: 0 0 0 15px
+      color: #000
+      text-transform: uppercase
+    br
+      display: none
+  &-brows
+    &__block
+      margin: 0 0 35px 0
+  &-items
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 20px
+
+  &-item
+    // width: 100%
+    max-height: 350px
+    a
+      // display: inline-block
+      // width: 100%
+      height: 100%
+      img
+        width: 100%
+        height: 100%
+        max-height: 100%
+        object-fit: cover
+
+.articles
+  padding: 100px 80px 80px 80px
+  &-wrapper
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+  &-title
+
+  &-subtitle
+
+  &-items
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    column-gap: 15px
+    row-gap: 15px
+  &-item
