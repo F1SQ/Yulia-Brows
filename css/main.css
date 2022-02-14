@@ -2606,6 +2606,9 @@ body._lock {
   .gallery_container {
     padding: 0;
   }
+  .gallery-item a::before, .gallery-item a::after, .gallery-item a span {
+    display: none;
+  }
   .contacts {
     padding: 90px 70px 0px 15px;
   }
