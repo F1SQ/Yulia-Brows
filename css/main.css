@@ -3025,6 +3025,9 @@ body._lock {
   .portfolio-items {
     gap: 10px;
   }
+  .thanks-title {
+    font-size: 32px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -3349,6 +3352,9 @@ body._lock {
   .portfolio-title {
     font-size: 25px;
     margin: 0 0 30px 0;
+  }
+  .thanks-title {
+    font-size: 30px;
   }
 }
 
