@@ -2076,17 +2076,6 @@ body._lock {
   margin: 0 0 35px 0;
 }
 
-.portfolio-title--bold {
-  font-weight: 600;
-  margin: 0 0 0 15px;
-  color: #000;
-  text-transform: uppercase;
-}
-
-.portfolio-title br {
-  display: none;
-}
-
 .portfolio-brows__block {
   margin: 0 0 35px 0;
 }
@@ -2606,9 +2595,6 @@ body._lock {
   .gallery_container {
     padding: 0;
   }
-  .gallery-item a::before, .gallery-item a::after, .gallery-item a span {
-    display: none;
-  }
   .contacts {
     padding: 90px 70px 0px 15px;
   }
@@ -2979,6 +2965,9 @@ body._lock {
   .gallery-content {
     padding: 0;
   }
+  .gallery-item a span {
+    font-size: 20px;
+  }
   .contacts {
     padding: 70px 10px 0px 10px;
   }
@@ -3018,12 +3007,6 @@ body._lock {
   }
   .portfolio-title {
     font-size: 30px;
-  }
-  .portfolio-title br {
-    display: block;
-  }
-  .portfolio-title--bold {
-    margin: 0;
   }
   .portfolio-items {
     gap: 10px;
@@ -3345,8 +3328,6 @@ body._lock {
     top: -60px;
   }
   .gallery-content {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
     gap: 10px;
   }
   .contacts-map {
@@ -3404,6 +3385,13 @@ body._lock {
   }
   .gallery-title {
     font-size: 25px;
+  }
+  .gallery-content {
+    gap: 5px;
+  }
+  .gallery-item a span {
+    font-size: 17px;
+    width: 90%;
   }
   .portfolio-title {
     font-size: 22px;

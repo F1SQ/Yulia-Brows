@@ -435,10 +435,10 @@
     padding: 70px 90px 50px 20px
     &_container
       padding: 0
-    &-item
-      a
-        &::before, &::after, span
-          display: none
+    // &-item
+    //   a
+    //     &::before, &::after, span
+    //       display: none
     // &-slide
     //   height: 350px
     //   a
@@ -733,6 +733,10 @@
     padding: 70px 20px 50px 20px
     &-content
       padding: 0
+    &-item
+      a
+        span
+          font-size: 20px
 
   .contacts
     padding: 70px 10px 0px 10px
@@ -767,10 +771,6 @@
   .portfolio
     &-title
       font-size: 30px
-      br
-        display: block
-      &--bold
-        margin: 0
     &-items
       gap: 10px
   .thanks
@@ -1055,7 +1055,7 @@
     &-title
       top: -60px
     &-content
-      grid-template-columns: 1fr
+      // grid-template-columns: 1fr
       gap: 10px
     &-item
     // &__page
@@ -1134,6 +1134,13 @@
   .gallery
     &-title
       font-size: 25px
+    &-content
+      gap: 5px
+    &-item
+      a
+        span
+          font-size: 17px
+          width: 90%
   // .collective
   //   &-position
       // &__profession
