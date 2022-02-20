@@ -894,7 +894,50 @@
 
   &-items
     display: grid
-    grid-template-columns: repeat(3, 1fr)
-    column-gap: 15px
-    row-gap: 15px
+    grid-template-columns: repeat(2, 1fr)
+    gap: 20px
   &-item
+    position: relative
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: repeat(3, min-content)
+    box-shadow: 1px 1px 25px 10px #ccc
+    padding: 10px 0
+    border-radius: 3px
+    max-height: 950px
+    overflow: hidden
+    transition: all 0.4s ease
+
+    h3
+      font-size: 22px
+      font-weight: 600
+      grid-row: 1/2
+      margin: 0 auto 15px
+      padding: 0 10px
+    img
+      grid-row: 2/3
+      // max-width: 400px
+      // height: auto
+    p
+      font-size: 18px
+      line-height: 25px
+      font-weight: 500
+      grid-row: 3/4
+      padding: 5px 15px
+
+    &__button
+      display: flex
+      align-items: center
+      justify-content: center
+      position: absolute
+      width: 100%
+      height: 70px
+      // left: 50%
+      font-size: 25px
+      font-style: bold
+      bottom: 0
+      // transform: translateX(-50%)
+      color: #fff
+      background-color: #3f3f3fd7
+      margin: 0 auto
+      cursor: pointer

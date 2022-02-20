@@ -2133,11 +2133,76 @@ body._lock {
 .articles-items {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-  -webkit-column-gap: 15px;
-          column-gap: 15px;
-  row-gap: 15px;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.articles-item {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: (min-content)[3];
+      grid-template-rows: repeat(3, -webkit-min-content);
+      grid-template-rows: repeat(3, min-content);
+  -webkit-box-shadow: 1px 1px 25px 10px #ccc;
+          box-shadow: 1px 1px 25px 10px #ccc;
+  padding: 10px 0;
+  border-radius: 3px;
+  max-height: 950px;
+  overflow: hidden;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.articles-item h3 {
+  font-size: 22px;
+  font-weight: 600;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  margin: 0 auto 15px;
+  padding: 0 10px;
+}
+
+.articles-item img {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+}
+
+.articles-item p {
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 500;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  padding: 5px 15px;
+}
+
+.articles-item__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  font-size: 25px;
+  font-style: bold;
+  bottom: 0;
+  color: #fff;
+  background-color: #3f3f3fd7;
+  margin: 0 auto;
+  cursor: pointer;
 }
 
 @media (max-width: 2560px) {
