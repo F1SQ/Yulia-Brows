@@ -730,6 +730,12 @@ body._lock {
   margin: 0 0 50px 0;
 }
 
+.thanks p {
+  font-size: 25px;
+  line-height: normal;
+  font-weight: 600;
+}
+
 .thanks-button {
   font-size: 18px;
   line-height: normal;
