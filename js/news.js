@@ -87,12 +87,12 @@ $(document).ready(function () {
     },
   });
 
-  let articlesBtns = document.querySelectorAll(".articles-item__button");
+  // let articlesBtns = document.querySelectorAll(".articles-item__button");
 
-  articlesBtns.forEach((item, i) => {
-    item.addEventListener("click", () => {
-      item.parentElement.style.maxHeight = `none`;
-      item.style.opacity = `0`;
-    });
-  });
+  // articlesBtns.forEach((item, i) => {
+  //   item.addEventListener("click", () => {
+  //     item.parentElement.style.height = `100%`;
+  //     item.style.opacity = `0`;
+  //   });
+  // });
 });

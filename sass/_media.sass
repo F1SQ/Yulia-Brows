@@ -463,6 +463,15 @@
     &-schedule
       padding: 25px 10px 25px 30px
 
+  .articles
+    &-item
+      img
+        max-height: 300px
+        grid-column: 1/3
+      &__text
+        grid-column: 1/3
+        grid-row: 3/4
+
 @media (max-width : 768px)
   .container
     width: 540px
@@ -776,6 +785,12 @@
   .thanks
     &-title
       font-size: 32px
+
+  .articles
+    &-item
+      h3
+        font-size: 20px
+
 @media (max-width : 576px)
   .container
     width: 100%
@@ -954,6 +969,9 @@
       grid-template-columns: repeat(2, 1fr)
       gap: 8px
 
+  .articles
+    padding: 70px 0px 0px 0px
+
 @media (max-width : 425px)
   .header
     &-menu
@@ -1091,6 +1109,19 @@
   .thanks
     &-title
       font-size: 30px
+
+  .articles
+    &-title
+      margin: 0px 0 25px 0
+      font-size: 1.6em
+    &-item
+      h3
+        font-size: 17px
+        text-align: center
+        margin: 0 auto
+      p
+        font-size: 16px
+        line-height: 20px
 
 @media (max-width : 375px)
 
