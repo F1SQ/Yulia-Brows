@@ -2286,6 +2286,14 @@ body._lock {
 }
 
 .articles-item a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
   text-decoration: none;
   color: inherit;
   font-size: 16px;
@@ -2298,7 +2306,7 @@ body._lock {
   max-height: 280px;
   -o-object-fit: cover;
      object-fit: cover;
-  margin: 0 0 15px 0;
+  margin: 0 0 25px 0;
 }
 
 .articles-item h3 {
@@ -2309,13 +2317,16 @@ body._lock {
   font-style: italic;
   margin: 0 auto 15px;
   padding: 0 10px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .articles-text {
   width: 100%;
   color: inherit;
-  font-size: 21px;
-  line-height: 1.65;
+  font-size: 18px;
+  line-height: 1;
   font-weight: 400;
   padding: 0 15px 0 15px;
   margin: 0;
@@ -2324,10 +2335,6 @@ body._lock {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-}
-
-.articles-text ._open {
-  -webkit-line-clamp: none;
 }
 
 .articles-item._single {
@@ -2343,7 +2350,13 @@ body._lock {
 }
 
 .articles-text._open {
+  font-size: 21px;
+  line-height: 1.4;
   -webkit-line-clamp: inherit;
+}
+
+.articles-text._open:not(:last-child) {
+  margin: 0 0 10px 0;
 }
 
 .article {
