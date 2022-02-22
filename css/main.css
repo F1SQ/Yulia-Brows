@@ -2283,6 +2283,13 @@ body._lock {
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
   overflow: hidden;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.articles-item:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
 }
 
 .articles-item a {
@@ -2341,6 +2348,11 @@ body._lock {
   max-width: 80%;
   height: auto;
   margin: 0 auto;
+}
+
+.articles-item._single:hover {
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .articles-item._single img {
