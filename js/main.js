@@ -149,4 +149,13 @@ $(document).ready(function () {
       return window.innerWidth < maxWidth;
     },
   });
+
+  let whatsappBtn = document.querySelector(".whatsapp-button");
+  let whatsappCloseBtn = document.querySelector(".whatsapp-box__close");
+
+  whatsappBtn.addEventListener("click", () => {
+    whatsappBtn.classList.add("_open");
+  });
+
+  whatsappCloseBtn.addEventListener("click", () => {});
 });
