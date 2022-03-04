@@ -152,10 +152,18 @@ $(document).ready(function () {
 
   let whatsappBtn = document.querySelector(".whatsapp-button");
   let whatsappCloseBtn = document.querySelector(".whatsapp-box__close");
+  let whatsappBox = document.querySelector(".whatsapp-box");
+  // let whatsappIconClose = document.querySelector(".whatsapp-icon--close");
 
   whatsappBtn.addEventListener("click", () => {
     whatsappBtn.classList.add("_open");
+    whatsappBox.classList.add("_open");
+    // whatsappIconClose.classList.remove("_close");
   });
 
-  whatsappCloseBtn.addEventListener("click", () => {});
+  whatsappCloseBtn.addEventListener("click", () => {
+    whatsappBox.classList.remove("_open");
+    whatsappBtn.classList.remove("_open");
+    // whatsappIconClose.classList.add("_close");
+  });
 });

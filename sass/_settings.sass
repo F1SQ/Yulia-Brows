@@ -268,12 +268,25 @@ body._lock
     &:hover
       text-decoration: underline
 
+@keyframes whatsapp
+  0%
+    // transform: translateX(0) 
+
+    transform: translate(25%, 20%) scale(1)
+    // opacity: 1
+  50%
+    transform: translate(-10%, 0) scale(1.1)
+  100%
+    opacity: 1
+    transform: translate(0, 0) scale(1)
+
 .whatsapp
   position: fixed
   bottom: 40px
   right: 120px
   z-index: 100
   padding: 8px
+
   &-button
     position: relative
     display: flex
@@ -286,8 +299,13 @@ body._lock
     background-color: #25d366
     cursor: pointer
     box-shadow: 1px 5px 25px -5px rgba(7, 94, 84, 0.24)
-    transition: border-radius 0.4s ease, width 0.2s linear
+    transition: border-radius 0.2s ease, width 0.1s linear, background-color 0.3s ease
+    transform: translateX(25%, 20%) scale(0)
     z-index: 100
+    opacity: 0
+    animation: whatsapp 0.6s ease 1s 1
+    animation-fill-mode: forwards
+
     &__text
       position: relative
       display: none
@@ -300,6 +318,7 @@ body._lock
       background-color: darken(#25d366, 7%)
       .whatsapp-button__description
         opacity: 1
+        visibility: visible
     &__description
       position: absolute
       top: 50%
@@ -351,10 +370,12 @@ body._lock
     &-icon
       display: none
 
-  &-icon
+  &-icon--close
+    display: none
     width: 42px
     height: 42px
     display: block
+  // &-icon--close._close
 
   &-link
     display: none
@@ -367,9 +388,12 @@ body._lock
     height: 100%
     border-radius: 30px
     background-color: transparent
-
+  &-box._open
+    // width: 400px
+    opacity: 1
   &-box
     width: 400px
+    // width: 0px
     min-height: 350px
     display: flex
     flex-direction: column
@@ -381,8 +405,10 @@ body._lock
     box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.5)
     opacity: 1
     transform: scaleX(1)
-    transition: all 0.3s linear
+    transition: all 0.2s linear
     z-index: 99
+    opacity: 0
+
     &__header
       display: flex
       justify-content: flex-start

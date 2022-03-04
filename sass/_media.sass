@@ -477,7 +477,31 @@
 @media (max-width : 768px)
   .container
     width: 540px
-
+  .whatsapp
+    width: 50vw
+    bottom: 70px
+    right: 20px
+    &-button
+      margin-left: auto
+      width: 45px
+      height: 45px
+    &-button._open
+      width: 80%
+    &-icon
+      &--close
+        width: 35px
+        height: 35px
+    &-box
+      // max-width: 400px
+      width: 100%
+      // width: 360px
+      min-height: 290px
+      &__header
+        height: 50px
+      &__text
+        letter-spacing: 0.5px
+        line-height: 22px
+        padding: 10px
   .aside
     &-menu
       display: none
@@ -802,6 +826,8 @@
   .container
     width: 100%
     padding: 0 10px
+  .whatsapp
+    width: 70vw
   .header
     &-logo
       margin-right: 0
@@ -985,6 +1011,11 @@
     padding: 100px 0
 
 @media (max-width : 425px)
+  .whatsapp
+    width: 90vw
+    right: 50%
+    transform: translateX(50%)
+
   .header
     &-menu
       height: 65px
@@ -1146,7 +1177,10 @@
       margin: 0 auto 25px
 
 @media (max-width : 375px)
-
+  .whatsapp
+    &-box
+      &__text
+        line-height: 22px
   .header
     &-menu
       &__burger
